@@ -29,7 +29,15 @@
       </div>
 
       <div class="campo-digitacao">
-        <textarea class="entrada-digitacao" autofocus></textarea>
+        <textarea
+          class="entrada-digitacao"
+          autofocus
+          spellcheck="false"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          data-gramm="false"
+        ></textarea>
 
         <div class="janela-texto">
           <div class="texto-digitacao"></div>
@@ -61,9 +69,7 @@
         <button class="btn-reiniciar">Reiniciar</button>
       </div>
 
-      <div class="dica">
-        Clique em "Reiniciar" para gerar um novo texto.
-      </div>
+      <div class="dica">Clique em "Reiniciar" para gerar um novo texto.</div>
     </div>
 
     <script src="script.js"></script>
