@@ -1,29 +1,36 @@
 const palavras = [
-"tecnologia", "computador", "programação", "javascript", "algoritmo", "desenvolvimento", "interface", "servidor", "framework", "biblioteca",
-"aplicativo", "navegador", "monitor", "teclado", "processador", "memória", "internet", "protocolo", "database", "documento",
-"pesquisa", "conhecimento", "criatividade", "aprendizado", "experiência", "responsabilidade", "oportunidade", "persistência", "dedicação", "transformação",
-"organização", "planejamento", "estratégia", "objetivo", "resultado", "desempenho", "qualidade", "progresso", "competência", "habilidade",
-"eficiência", "produtividade", "liderança", "comunicação", "colaboração", "solução", "problema", "desafio", "conquista", "inovação",
-"digital", "virtual", "sistema", "arquivo", "código", "comando", "função", "variável", "constante", "estrutura",
-"repetição", "condição", "execução", "compilador", "terminal", "conexão", "segurança", "criptografia", "autenticação", "permissão",
-"usuário", "cadastro", "mensagem", "conteúdo", "plataforma", "ferramenta", "projeto", "empresa", "mercado", "indústria",
-"profissão", "carreira", "contrato", "documentação", "engenharia", "laboratório", "cientista", "universidade", "estudante", "professor",
-"biblioteca", "caderno", "caneta", "mochila", "calculadora", "experimento", "fórmula", "equação", "estatística", "geometria",
-"matemática", "física", "química", "biologia", "astronomia", "planeta", "galáxia", "universo", "asteroide", "cometa",
-"foguete", "astronauta", "gravidade", "atmosfera", "continente", "montanha", "cachoeira", "floresta", "natureza", "oceano",
-"correnteza", "tempestade", "primavera", "inverno", "horizonte", "paisagem", "aventura", "exploração", "descoberta", "viagem",
-"passagem", "aeroporto", "bicicleta", "motocicleta", "caminhão", "automóvel", "rodovia", "estacionamento", "semáforo", "combustível",
-"garagem", "oficina", "mercadoria", "comércio", "restaurante", "padaria", "supermercado", "hospital", "farmácia", "academia",
-"parque", "jardim", "praça", "condomínio", "apartamento", "escritório", "cozinha", "banheiro", "corredor", "janela",
-"cortina", "espelho", "geladeira", "micro-ondas", "televisão", "ventilador", "aspirador", "cafeteira", "liquidificador", "refrigerante",
-"chocolate", "sanduíche", "macarrão", "hambúrguer", "morango", "abacaxi", "laranja", "melancia", "abóbora", "cenoura",
-"pepino", "tomate", "cebola", "alface", "espinafre", "amendoim", "castanha", "biscoito", "pipoca", "sorvete",
-"camiseta", "bermuda", "jaqueta", "sapato", "tênis", "meias", "moletom", "gravata", "capacete", "guarda-chuva",
-"fotografia", "desenho", "escultura", "arquitetura", "literatura", "romance", "personagem", "capítulo", "parágrafo", "diálogo",
-"aventureiro", "guerreiro", "castelo", "dragão", "espada", "armadura", "escudo", "feiticeiro", "magia", "portal",
-"labirinto", "cristal", "diamante", "tesouro", "recompensa", "campeonato", "competição", "jogador", "treinamento", "velocidade",
-"resistência", "vencedor", "medalha", "troféu", "basquete", "voleibol", "natação", "atletismo", "xadrez", "corrida",
-"futebol", "motocross", "disciplina", "motivação", "inspiração", "equilíbrio", "concentração", "atenção", "evolução", "crescimento"
+  "casa", "carro", "livro", "mesa", "cadeira", "janela", "porta", "parede",
+  "telefone", "computador", "teclado", "mouse", "tela", "papel", "caneta", "lápis",
+  "borracha", "caderno", "mochila", "sapato", "camisa", "calça", "vestido", "chapéu",
+  "relógio", "espelho", "chave", "carteira", "bolsa", "óculos", "cama", "travesseiro",
+  "cobertor", "toalha", "sabonete", "escova", "pasta", "copo", "prato", "garfo",
+  "faca", "colher", "panela", "fogão", "geladeira", "armário", "sofá", "televisão",
+  "controle", "lâmpada", "ventilador", "cortina", "tapete", "quintal", "jardim", "árvore",
+  "flor", "grama", "folha", "fruta", "banana", "maçã", "laranja", "uva",
+  "melancia", "manga", "abacaxi", "morango", "limão", "pêssego", "cereja", "pera",
+  "feijão", "arroz", "macarrão", "pão", "leite", "queijo", "manteiga", "ovo",
+  "carne", "peixe", "frango", "sopa", "salada", "açúcar", "sal", "óleo",
+  "café", "chá", "suco", "água", "vinho", "cerveja", "gelo", "escola",
+  "professor", "aluno", "lousa", "sala", "biblioteca", "laboratório", "pátio", "recreio",
+  "exame", "prova", "nota", "diploma", "trabalho", "escritório", "empresa", "reunião",
+  "cliente", "chefe", "salário", "emprego", "carreira", "projeto", "equipe", "documento",
+  "cidade", "bairro", "rua", "avenida", "praça", "parque", "hospital", "farmácia",
+  "mercado", "padaria", "banco", "correio", "shopping", "cinema", "teatro", "museu",
+  "igreja", "estádio", "praia", "montanha", "floresta", "rio", "lago", "mar",
+  "oceano", "ilha", "deserto", "vulcão", "estrela", "lua", "sol", "céu",
+  "nuvem", "chuva", "vento", "trovão", "relâmpago", "neve", "inverno", "verão",
+  "outono", "primavera", "manhã", "tarde", "noite", "meia-noite", "amanhecer", "entardecer",
+  "segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo", "janeiro",
+  "fevereiro", "março", "abril", "maio", "junho", "julho", "cachorro", "gato",
+  "pássaro", "peixinho", "cavalo", "vaca", "porco", "galinha", "pato", "coelho",
+  "tartaruga", "elefante", "leão", "tigre", "urso", "macaco", "cobra", "aranha",
+  "borboleta", "abelha", "formiga", "família", "mãe", "pai", "filho", "filha",
+  "irmão", "irmã", "avô", "avó", "tio", "tia", "primo", "prima",
+  "sobrinho", "amigo", "vizinho", "namorado", "namorada", "esposo", "esposa", "bebê",
+  "criança", "jovem", "idoso", "homem", "mulher", "pessoa", "gente", "povo",
+  "grupo", "música", "dança", "canção", "instrumento", "violão", "piano", "tambor",
+  "flauta", "guitarra", "bateria", "cantor", "banda", "show", "festa", "esporte",
+  "futebol", "basquete"
 ];
 
 const elementos = {
@@ -73,7 +80,7 @@ function adicionarNovoTexto() {
 }
 
 function obterTextoCompleto() {
-  return estado.historicoTextos.join(' ');
+  return estado.historicoTextos.join(' ').normalize('NFC');
 }
 
 function garantirTextoSuficiente(posicaoAtual) {
@@ -246,7 +253,7 @@ function iniciarDigito() {
     iniciarTimer();
   }
 
-  estado.textoDigitado = elementos.campoDigitacao.value;
+  estado.textoDigitado = elementos.campoDigitacao.value.normalize('NFC');
   garantirTextoSuficiente(estado.textoDigitado.length);
 
   calcularEstatisticas();
@@ -279,3 +286,18 @@ function inicializar() {
 }
 
 inicializar();
+
+function desativarCorretorOrtografico() {
+  const campo = elementos.campoDigitacao;
+  campo.setAttribute('spellcheck', 'false');
+  campo.spellcheck = false;
+
+
+  campo.blur();
+  requestAnimationFrame(() => {
+    campo.focus();
+  });
+}
+
+desativarCorretorOrtografico();
+window.addEventListener('focus', desativarCorretorOrtografico);
