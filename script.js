@@ -1,5 +1,5 @@
 const palavras = [
-  "janela", "garrafa", "cadeira", "travesseiro", "almofada", "bicicleta",
+"janela", "garrafa", "cadeira", "travesseiro", "almofada", "bicicleta",
 "caminhão", "helicóptero", "esquilo", "canguru", "golfinho", "tartaruga",
 "girassol", "tempestade", "relâmpago", "cachoeira", "montanha", "floresta",
 "oceano", "deserto", "vulcão", "labirinto", "castelo", "tesouro",
