@@ -1,5 +1,5 @@
 const palavras = [
-"janela", "garrafa", "cadeira", "travesseiro", "almofada", "bicicleta",
+  "janela", "garrafa", "cadeira", "travesseiro", "almofada", "bicicleta",
 "caminhão", "helicóptero", "esquilo", "canguru", "golfinho", "tartaruga",
 "girassol", "tempestade", "relâmpago", "cachoeira", "montanha", "floresta",
 "oceano", "deserto", "vulcão", "labirinto", "castelo", "tesouro",
@@ -134,26 +134,42 @@ function renderizarTexto() {
   const textoDigitado = estado.textoDigitado;
   const posicaoAtual = textoDigitado.length;
 
-  elementos.textoDigitacao.innerHTML = chars
-    .map((caractere, indice) => {
-      let classe = 'char';
+  let html = '';
+  let palavraAtual = '';
 
-      if (indice < textoDigitado.length) {
-        classe += textoDigitado[indice] === caractere ? ' correct' : ' wrong';
-      } else if (!estado.concluido && indice === posicaoAtual) {
-        classe += ' current';
-      }
+  const fecharPalavra = () => {
+    if (palavraAtual) {
+      html += `<span class="word">${palavraAtual}</span>`;
+      palavraAtual = '';
+    }
+  };
 
-      const conteudo = caractere === ' ' ? '&nbsp;' : caractere;
-      return `<span class="${classe}">${conteudo}</span>`;
-    })
-    .join('');
+  chars.forEach((caractere, indice) => {
+    let classe = 'char';
+
+    if (indice < textoDigitado.length) {
+      classe += textoDigitado[indice] === caractere ? ' correct' : ' wrong';
+    } else if (!estado.concluido && indice === posicaoAtual) {
+      classe += ' current';
+    }
+
+    if (caractere === ' ') {
+      fecharPalavra();
+      html += `<span class="${classe}">&nbsp;</span>`;
+    } else {
+      palavraAtual += `<span class="${classe}">${caractere}</span>`;
+    }
+  });
+
+  fecharPalavra();
+
+  elementos.textoDigitacao.innerHTML = html;
 
   ajustarScroll(posicaoAtual, chars.length);
 }
 
 function ajustarScroll(posicaoAtual, totalChars) {
-  const spans = elementos.textoDigitacao.children;
+  const spans = elementos.textoDigitacao.querySelectorAll('.char');
   if (totalChars === 0) return;
 
   const indiceAlvo = Math.min(posicaoAtual, totalChars - 1);
